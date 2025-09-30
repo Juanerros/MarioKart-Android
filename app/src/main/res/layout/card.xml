@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:padding="12dp">
+    tools:ignore="MissingClass"
+    tools:context=".MainActivity"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="14dp"
+    android:layout_margin="10dp">
+
 
     <ImageView
         android:id="@+id/imgPersonaje"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_foreground" />
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="tonto"/>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -19,6 +27,7 @@
         android:orientation="vertical"
         android:paddingStart="12dp"
         tools:ignore="RtlSymmetry">
+
         <TextView
             android:id="@+id/txtNombre"
             android:layout_width="wrap_content"
@@ -26,23 +35,26 @@
             android:text="Nombre"
             android:textSize="28sp"
             android:textStyle="bold" />
+
         <TextView
             android:id="@+id/txtVida"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Vida: ---" />
+            android:text="Vida: ---"
+            android:textSize="18sp" />
+
         <TextView
             android:id="@+id/txtVelocidad"
-            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Velocidad: ---" />
+            android:text="Velocidad: ---"
+            android:textSize="18sp" />
+
         <TextView
             android:id="@+id/txtAceleracion"
-            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aceleración: ---" />
+            android:text="Aceleración: ---"
+            android:textSize="18sp" />
     </LinearLayout>
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

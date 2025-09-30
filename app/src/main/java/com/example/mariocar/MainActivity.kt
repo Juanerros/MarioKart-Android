@@ -1,5 +1,6 @@
 package com.example.mariocar
 
+import CharacterAdapter
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
 //carga el recycler con el adaptador y al adaptador le mandamos la lista de personajes
-
+        recyclerView.adapter = CharacterAdapter(ListCharacters.personajes)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
